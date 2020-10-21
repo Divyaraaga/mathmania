@@ -28,5 +28,7 @@ npm install
 ionic serve
 ```
 
+Inspect the application in chrome and click on toggle device toolbar(will be to the left of Elements) to view the app in mobile view within the browser
+
 ## License
 [MATHMANIA]
