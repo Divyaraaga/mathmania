@@ -1,0 +1,181 @@
+$label-color:      #073763;
+$choice-color:     #8A5E43;
+$icon-color:       #436F8A;
+$container-bg:     #E0D8C5;
+$coins-color:      #BF9000;
+$coins-shop-color: #917950;
+$bg-color:         beige;
+
+ion-content{
+    --background: beige;
+}
+body{
+   font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+ion-item {
+    --border-width: 0;
+    --inner-border-width: 0;  
+    --background: $bg-color;
+}
+
+#welcome-user-screen{
+  text-align: center;
+  background: $bg-color;
+}
+
+#operators-container{
+  --background: $bg-color;  
+}
+
+.common-label{
+  margin-top: 10px;
+  font-size: 1.1em;
+  margin-left: 20px;
+  color:$label-color;
+  text-align: left;
+  font-weight: 500;
+}
+
+.choice-color{
+  color: $choice-color;
+  font-weight:300;
+}
+
+// Coins component - Starts
+#coins-container{
+  font-size: 0.8em;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  width: 70%;
+  margin-left: 35px;
+  // margin-top: -8px;
+}
+
+#coins-container .col {
+  border: solid 1px grey;
+  border-bottom-style: none;
+  color: white;
+}
+
+#coins-container .col:last-child {
+  border-bottom: solid 1px grey;
+}
+
+#coins-container #coins {
+  background-color:$coins-color;
+  height:40px;
+}
+
+#coins-container #shop {
+  background-color:$coins-shop-color;
+  height:25px;
+}
+// Coins component - Ends
+
+// Welcome user component - Starts
+#welcome-container {
+  text-align: center;
+  color: $label-color;
+  margin-top: -20px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#welcome-container strong {
+  font-size: 1.5em;
+}
+
+#welcome-container .icon {
+   font-size: 5em;
+   color: $icon-color;
+}
+
+#welcome-container .user-name {
+  text-align: center;
+  width: 50%;
+}
+
+// Welcome user component - Ends
+
+// Select difficulty component - Starts
+#difficulty-component{
+  margin-top: 40px;
+}
+
+#difficulty-container .max-button-width{
+    font-size: 0.75em;
+    min-width: 100px;
+}
+
+.difficulty-clicked{
+  // background-color: #e0ca87;
+}
+
+// Select difficulty component - Ends
+
+// Operators component - Starts
+
+.select-operators{
+    font-size: 1em;
+    color: $choice-color;
+    min-width: 100%;
+    max-width: 350px;
+    border: solid 1px $container-bg;
+    border-radius: 5px;
+    font-weight:500;
+}
+// Operators component - Ends
+
+// Question component - Starts
+#question-cnt-container{
+  border: solid 1px $container-bg;
+  border-radius: 5px;
+  // outline: 5px dashed blue;
+  // outline-offset: 5px;
+  margin-bottom: 2px;
+}
+
+#question-label{
+  font-size: 1.1em;
+  color: $label-color;
+  text-align: left;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+#question-count{
+  font-size: 1.2em;
+  font-weight: 500;
+  color: $label-color;
+  margin-right: 1px;
+  text-align: right;
+}
+// Question component - Ends
+
+// Go Container component - Starts
+ #go-container{
+  text-align: center;
+  margin-top: 10px;
+}
+
+#go-container #go-btn{
+  width: 5em ;
+  height:3em;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#go-container #stats{
+  width: 5em;
+  height: 4em;
+}
+
+#go-container #friends{
+  width: 4em;
+  height: 4em;
+}  
+
+#go-container .link-color{
+  color:$label-color;
+} 
+// Question component - Ends

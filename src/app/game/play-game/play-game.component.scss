@@ -1,0 +1,136 @@
+// Coins component - Starts
+$bg-color: beige;
+$points-color: #917850;
+$options-color: #783F04;
+
+ion-content{
+  --background: beige;
+}
+
+body{
+   font-family: "Comic Sans MS", cursive, sans-serif; 
+}
+
+#game-user-screen{
+  text-align: center; 
+  background: $bg-color;
+}
+
+#points-container{
+  font-size: 0.8em;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  background-color: $points-color;
+  border-radius: 5px;
+  color: white;
+}
+
+#board-outer-container {
+  text-align: center;
+  // height: 8em;
+}
+
+#board-container {
+  text-align: center;
+  color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-image: url("/assets/images/bboard.png");
+  background-color: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain;
+  margin: auto;
+  width: 80%;
+  height: 200px;
+}
+
+#board-row{
+    padding-top: 20%;
+    font-size: 40px;
+}
+
+@keyframes revolveDrop {
+  30% {
+    transform: translate(0, -50px) rotate(180deg) scale(1);
+  }
+
+  60% {
+    transform: translate(0, 20px) scale(.8) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes leftRight {
+  40% {
+    transform: translate(50px, 0) scale(.7);
+    opacity: 1;
+    // color: #348c04;
+  }
+
+  60% {
+    // color: #0f40ba;
+  }
+
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+#col-one{
+  text-align: right;
+  transform: translate(-150px, 0) scale(.3);
+  animation: leftRight .5s forwards;
+}
+
+#col-three{
+  text-align: left;
+  transform: translate(-150px, 0) scale(.3);
+  animation: leftRight .5s forwards;
+}
+
+#answer-container {
+  text-align: center;
+  color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-image: url("/assets/images/bboard.png");
+  background-color: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain;
+  margin: auto;
+  width: 80%;
+  height: 100px;
+}
+
+.answer-padding{
+    padding: 35%;
+    font-size: 20px;
+}
+
+#options-container{
+   text-align: center;
+    font-size: 20px;
+    margin-top: -20px;
+    color:$options-color;
+}
+
+#boy-image{
+  max-width: 20%;
+  margin-bottom: -5px;
+}
+
+
+

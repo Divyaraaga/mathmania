@@ -1,0 +1,95 @@
+<ion-content id="game-user">
+	<div id="game-user-screen">
+		<ion-grid>
+			<ion-row>
+				<ion-col></ion-col>
+				<ion-col></ion-col>
+				<ion-col>
+					<div id="points-container" class="center">
+						<div class="points" id= "shop">
+							200 points
+						</div>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<div id="board-outer-container">
+			<div id="board-container">
+				<ion-grid id="board-row">
+					<ion-row>
+						<ion-col id="col-one">
+							33
+						</ion-col>
+						<ion-col id="col-two">
+							-
+						</ion-col>
+						<ion-col id="col-three">
+							11
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</div>
+
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<a>
+					<div id="answer-container">
+						<div class="answer-padding">
+							11
+						</div>
+					</div> </a>
+				</ion-col>
+				<ion-col>
+					<div id="answer-container">
+						<div class="answer-padding">
+							10
+						</div>
+					</div>
+				</ion-col>
+				<ion-col >
+					<div id="answer-container">
+						<div class="answer-padding">
+							22
+						</div>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+		<div id="options-container">
+			<ion-grid>
+				<ion-row>
+					<ion-col>
+						A
+					</ion-col>
+					<ion-col>
+						B
+					</ion-col>
+					<ion-col >
+						C
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+		<div>
+			{{currentAnswer}}
+		</div>
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					{{time}}
+				</ion-col>
+				<ion-col>
+				    <img id="boy-image" src="../assets/images/boy.png"/>
+					<circle-progress [percent]="progress" [showSubtitle]="true" [subtitle]="progressText"></circle-progress>
+				</ion-col>
+				<ion-col >
+					{{correctAnswers}}
+					<br>
+					{{wrongAnswers}}
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+</ion-content>

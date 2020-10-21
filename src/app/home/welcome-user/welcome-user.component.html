@@ -1,0 +1,122 @@
+<ion-content id="welcome-user">
+	<div id="welcome-user-screen">
+		<ion-grid>
+			<ion-row>
+				<ion-col></ion-col>
+				<ion-col></ion-col>
+				<ion-col>
+					<div id="coins-container">
+						<div class= "col" id="coins">
+							Coins
+							<br>
+							0
+						</div>
+						<div class = "col" id= "shop">
+							Coin Shop
+						</div>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+
+		<div id="welcome-container">
+			<strong>Welcome</strong>
+			<br>
+			<ion-icon class = "icon" name="person-circle-outline"></ion-icon>
+			<!--
+			<img id="stats" width="20%" height= "20%"  src="../assets/images/user.png"/> -->
+			<br>
+
+			<label class = "item item-input">
+				<input type = "text" class="user-name" placeholder = "Buddy!" />
+			</label>
+		</div>
+
+		<div id="difficulty-component">
+			<div class="common-label">
+				Choose difficulty level:
+				<span class="choice-color"><strong>{{difficulty}}</strong></span>
+			</div>
+
+			<ion-grid id="difficulty-container">
+				<ion-row class="ion-align-items-center difficulty-row" >
+					<ion-col class="ion-align-items-center">
+						<ion-button id="warmingup-btn" color="warmingup" class="max-button-width" (click)= "selectDifficulty('Warming up')"
+						[ngClass]="{'difficulty-clicked' : difficulty =='Warming up'}">
+							Warming up
+						</ion-button>
+					</ion-col>
+					<ion-col>
+						<ion-button id="takeoff-btn" color="takeoff" class="max-button-width" (click)= "selectDifficulty('Ready to Take off')">
+							Ready to Take off
+						</ion-button>
+					</ion-col>
+					<ion-col>
+						<ion-button id="unstop-btn" color="unstop" class="max-button-width" (click)= "selectDifficulty('Unstoppable')">
+							Unstoppable
+						</ion-button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+
+		<div id="operators-component">
+			<div class="common-label">
+				Choose Operators
+			</div>
+
+			<ion-item id="operators-container">
+				<ion-select multiple="true" value="add" okText="Okay" cancelText="Cancel" class="select-operators" [(ngModel)]="optionSelected">
+					<ion-select-option value="add">
+						Add
+					</ion-select-option>
+					<ion-select-option value="subtract">
+						Subtract
+					</ion-select-option>
+					<ion-select-option value="multiply">
+						Multiply
+					</ion-select-option>
+					<ion-select-option value="tables">
+						Tables
+					</ion-select-option>
+				</ion-select>
+			</ion-item>
+		</div>
+		<div id="question-count-component">
+			<div class="common-label">
+				Question Count:
+				<span class="choice-color"><strong>{{questionCount}}</strong></span>
+			</div>
+
+			<ion-item>
+				<ion-range id="question-cnt-container" min="0" max="100" step="5" snaps="true" color="question-range" pin="true" value="5" [(ngModel)]="questionCount"></ion-range>
+			</ion-item>
+		</div>
+
+		<ion-grid id="go-container">
+			<ion-row class="ion-align-items-center">
+				<ion-col>
+					<img id="stats" src="../assets/images/stats_2.png"/>
+				</ion-col>
+				<ion-col>
+					<ion-button id="go-btn" color="go" (click) = "goBtn()">
+						Go
+					</ion-button>
+				</ion-col>
+				<ion-col>
+					<img id="friends" src="../assets/images/friends_2.png"/>
+				</ion-col>
+			</ion-row>
+			<ion-row class="ion-align-items-center">
+				<ion-col>
+					<a class="link-color"> Stats</a>
+				</ion-col>
+				<ion-col></ion-col>
+				<ion-col>
+					<a class="link-color"> Friends</a>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+</ion-content>
+
